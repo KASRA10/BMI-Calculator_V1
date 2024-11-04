@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:bmi_calculator_v1/src/reusable_card.dart';
 import 'package:bmi_calculator_v1/src/button_container.dart';
 import 'package:bmi_calculator_v1/src/icon_text_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const carColor = Color(
   0xFF1D1E33,
@@ -104,27 +105,9 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     changeableColor: carColorLighter,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mars,
-                          color: iconColors,
-                          size: 80.0,
-                          semanticLabel: 'Men\'s Icons',
-                        ),
-                        SizedBox(
-                          height: 15.0,
-                        ),
-                        Text(
-                          'MALE',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            color: textColors,
-                          ),
-                        ),
-                      ],
+                    cardChild: IconTextWidget(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
                     ),
                   ),
                 ),
@@ -139,54 +122,18 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     changeableColor: carColorLighter,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mars,
-                          color: iconColors,
-                          size: 80.0,
-                          semanticLabel: 'Men\'s Icons',
-                        ),
-                        SizedBox(
-                          height: 15.0,
-                        ),
-                        Text(
-                          'MALE',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            color: textColors,
-                          ),
-                        ),
-                      ],
+                    cardChild: IconTextWidget(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
                     ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     changeableColor: carColorLighter,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mars,
-                          color: iconColors,
-                          size: 80.0,
-                          semanticLabel: 'Men\'s Icons',
-                        ),
-                        SizedBox(
-                          height: 15.0,
-                        ),
-                        Text(
-                          'MALE',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            color: textColors,
-                          ),
-                        ),
-                      ],
+                    cardChild: IconTextWidget(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
                     ),
                   ),
                 ),
