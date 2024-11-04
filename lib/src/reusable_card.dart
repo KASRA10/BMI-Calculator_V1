@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ReusableContainer extends StatelessWidget {
+class ReusableCard extends StatelessWidget {
   final Color changeableColor;
+  final Widget cardChild;
 
-  const ReusableContainer({super.key, required this.changeableColor});
+  const ReusableCard({
+    super.key,
+    required this.changeableColor,
+    required this.cardChild,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +22,7 @@ class ReusableContainer extends StatelessWidget {
           15.0,
         ),
       ),
+      child: cardChild,
     );
   }
 }
