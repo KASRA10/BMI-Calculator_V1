@@ -6,6 +6,10 @@ const textColors = Color(
 const iconColors = Color(
   0xFFFFFFFF,
 );
+const myTextStyle = TextStyle(
+  fontSize: 18.0,
+  color: textColors,
+);
 
 class IconTextWidget extends StatelessWidget {
   final IconData icon;
@@ -34,10 +38,7 @@ class IconTextWidget extends StatelessWidget {
         ),
         Text(
           label,
-          style: TextStyle(
-            fontSize: 18.0,
-            color: textColors,
-          ),
+          style: myTextStyle,
         ),
       ],
     );

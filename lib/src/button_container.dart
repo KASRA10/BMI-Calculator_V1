@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+Radius marginDesignCirCular = Radius.circular(
+  10.0,
+);
+
 class ButtonContainer extends StatelessWidget {
   final double changeableHeight;
   final Color changeableColor;
@@ -20,13 +24,9 @@ class ButtonContainer extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         color: changeableColor,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(
-            10.0,
-          ),
-          topRight: Radius.circular(
-            10.0,
-          ),
+        borderRadius: BorderRadius.only(
+          topLeft: marginDesignCirCular,
+          topRight: marginDesignCirCular,
         ),
       ),
     );

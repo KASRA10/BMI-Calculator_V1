@@ -86,8 +86,8 @@ class _InputPageState extends State<InputPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         IconTextWidget(
-                          icon: FontAwesomeIcons.mars,
-                          label: 'MALE',
+                          icon: FontAwesomeIcons.venus,
+                          label: 'FEMALE',
                         ),
                       ],
                     ),
