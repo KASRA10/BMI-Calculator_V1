@@ -1,3 +1,4 @@
+import 'package:bmi_calculator_v1/src/reusable_container.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const BMICalculator());
@@ -58,53 +59,20 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(
-                      15.0,
-                    ),
-                    decoration: BoxDecoration(
-                      color: const Color(
-                        0xFF2D2E41,
-                      ),
-                      borderRadius: BorderRadius.circular(
-                        15.0,
-                      ),
+                  child: ReusableContainer(
+                    changeableColor: Color(
+                      0xFF2D2E41,
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(
-                      15.0,
-                    ),
-                    decoration: BoxDecoration(
-                      color: const Color(
-                        0xFF2D2E41,
-                      ),
-                      borderRadius: BorderRadius.circular(
-                        15.0,
-                      ),
+                  child: ReusableContainer(
+                    changeableColor: Color(
+                      0xFF2D2E41,
                     ),
                   ),
                 ),
               ],
-            ),
-          ),
-          Expanded(
-            child: Expanded(
-              child: Container(
-                margin: const EdgeInsets.all(
-                  15.0,
-                ),
-                decoration: BoxDecoration(
-                  color: const Color(
-                    0xFF2D2E41,
-                  ),
-                  borderRadius: BorderRadius.circular(
-                    15.0,
-                  ),
-                ),
-              ),
             ),
           ),
           Expanded(
@@ -113,32 +81,31 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(
-                      15.0,
+                  child: ReusableContainer(
+                    changeableColor: Color(
+                      0xFF2D2E41,
                     ),
-                    decoration: BoxDecoration(
-                      color: const Color(
-                        0xFF2D2E41,
-                      ),
-                      borderRadius: BorderRadius.circular(
-                        15.0,
-                      ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: ReusableContainer(
+                    changeableColor: Color(
+                      0xFF2D2E41,
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(
-                      15.0,
-                    ),
-                    decoration: BoxDecoration(
-                      color: const Color(
-                        0xFF2D2E41,
-                      ),
-                      borderRadius: BorderRadius.circular(
-                        15.0,
-                      ),
+                  child: ReusableContainer(
+                    changeableColor: Color(
+                      0xFF2D2E41,
                     ),
                   ),
                 ),
@@ -148,5 +115,5 @@ class _InputPageState extends State<InputPage> {
         ],
       ),
     );
-  }
-}
+  } // End Of Context
+} // End Of State
