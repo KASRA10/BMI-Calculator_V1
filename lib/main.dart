@@ -1,4 +1,5 @@
 import 'package:bmi_calculator_v1/src/reusable_container.dart';
+import 'package:bmi_calculator_v1/src/button_container.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const BMICalculator());
@@ -111,6 +112,10 @@ class _InputPageState extends State<InputPage> {
                 ),
               ],
             ),
+          ),
+          ButtonContainer(
+            changeableHeight: 80.0,
+            changeableColor: Colors.pink,
           ),
         ],
       ),
