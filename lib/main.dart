@@ -67,30 +67,18 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     changeableColor: carColorLighter,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        IconTextWidget(
-                          icon: FontAwesomeIcons.mars,
-                          label: 'MALE',
-                        ),
-                      ],
+                    cardChild: IconTextWidget(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE',
                     ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     changeableColor: carColorLighter,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        IconTextWidget(
-                          icon: FontAwesomeIcons.venus,
-                          label: 'FEMALE',
-                        ),
-                      ],
+                    cardChild: IconTextWidget(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
                     ),
                   ),
                 ),
