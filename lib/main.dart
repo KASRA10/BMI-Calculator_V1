@@ -49,7 +49,7 @@ class _InputPageState extends State<InputPage> {
           ),
         ),
       ),
-      body: Column(
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

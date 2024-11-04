@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ReusableContainer extends StatelessWidget {
-  ReusableContainer({super.key, required this.changeableColor});
+  const ReusableContainer({super.key, required this.changeableColor});
 
-  Color changeableColor;
+  final Color changeableColor;
 
   @override
   Widget build(BuildContext context) {
