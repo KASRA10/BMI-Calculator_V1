@@ -8,6 +8,10 @@ class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      color: Color(
+        0xFF1D1E33,
+      ),
       home: InputPage(),
     );
   }
@@ -25,15 +29,117 @@ class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(
+        0xFF1D1E33,
+      ),
       appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
+        backgroundColor: const Color(
+          0xFF1D1E33,
+        ),
+        shadowColor: const Color(
+          0xFF1D1E33,
+        ),
+        elevation: 15.0,
+        centerTitle: true,
+        title: const Text(
+          'BMI CALCULATOR',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
-      body: const Center(
-        child: Text('Body Text'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.all(
+                      15.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(
+                        0xFF2D2E41,
+                      ),
+                      borderRadius: BorderRadius.circular(
+                        15.0,
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.all(
+                      15.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(
+                        0xFF2D2E41,
+                      ),
+                      borderRadius: BorderRadius.circular(
+                        15.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Expanded(
+              child: Container(
+                margin: const EdgeInsets.all(
+                  15.0,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color(
+                    0xFF2D2E41,
+                  ),
+                  borderRadius: BorderRadius.circular(
+                    15.0,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.all(
+                      15.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(
+                        0xFF2D2E41,
+                      ),
+                      borderRadius: BorderRadius.circular(
+                        15.0,
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.all(
+                      15.0,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(
+                        0xFF2D2E41,
+                      ),
+                      borderRadius: BorderRadius.circular(
+                        15.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
