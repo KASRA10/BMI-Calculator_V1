@@ -39,6 +39,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   ColorUpdate colorUpdate =
       ColorUpdate(); // Create An Object From ColorChanger Class
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,47 +66,22 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        colorUpdate.colorUpdater(Gender.male);
-                      });
-                    },
-                    child: ReusableCard(
-                      changeableColor: colorUpdate.maleCardColor,
-                      cardChild: IconTextWidget(
-                        icon: FontAwesomeIcons.mars,
-                        label: 'MALE',
-                      ),
+                  child: ReusableCard(
+                    onPress: () => setState(() {
+                      colorUpdate.colorUpdater(Gender.male);
+                    }),
+                    changeableColor: colorUpdate.maleCardColor,
+                    cardChild: IconTextWidget(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE',
                     ),
                   ),
                 ),
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        colorUpdate.colorUpdater(Gender.female);
-                      });
-                    },
-                    child: ReusableCard(
-                      changeableColor: colorUpdate.femaleCardColor,
-                      cardChild: IconTextWidget(
-                        icon: FontAwesomeIcons.venus,
-                        label: 'FEMALE',
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
                 Expanded(
                   child: ReusableCard(
+                    onPress: () => setState(() {
+                      colorUpdate.colorUpdater(Gender.female);
+                    }),
                     changeableColor: colorUpdate.femaleCardColor,
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.venus,
@@ -122,22 +98,21 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: ReusableCard(
-                    changeableColor: inActiveCardColor,
-                    cardChild: IconTextWidget(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
-                    ),
-                  ),
+                  child: Placeholder(),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Placeholder(),
                 ),
                 Expanded(
-                  child: ReusableCard(
-                    changeableColor: inActiveCardColor,
-                    cardChild: IconTextWidget(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
-                    ),
-                  ),
+                  child: Placeholder(),
                 ),
               ],
             ),
