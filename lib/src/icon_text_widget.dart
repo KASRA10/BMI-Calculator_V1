@@ -22,7 +22,6 @@ class IconTextWidget extends StatelessWidget {
           icon,
           color: kIconColors,
           size: 80.0,
-          semanticLabel: 'Men\'s Icons',
         ),
         SizedBox(
           height: 15.0,
