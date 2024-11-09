@@ -5,14 +5,17 @@ import 'package:bmi_calculator_v1/src/reusable_card.dart';
 import 'package:bmi_calculator_v1/src/button_container.dart';
 import 'package:bmi_calculator_v1/src/icon_text_widget.dart';
 
-const carColor = Color(
+const basicCardColor = Color(
   0xFF1D1E33,
 );
-const carColorLighter = Color(
+const activeCardColor = Color(
   0xFF2D2E41,
 );
 const buttonButton = Color(
   0xFFEB1555,
+);
+const inActiveCardColor = Color(
+  0xFF111328,
 );
 
 void main() => runApp(const BMICalculator());
@@ -24,7 +27,7 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: carColor,
+      color: basicCardColor,
       home: InputPage(),
     );
   }
@@ -39,13 +42,38 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleCardColor = inActiveCardColor;
+  Color femaleCardColor = inActiveCardColor;
+
+  // 1 = male, 2= female ==> for Changeable colors
+  void colorUpdater(int gender) {
+    if (gender == 1) {
+      // Male Card Pressed
+      if (maleCardColor == inActiveCardColor) {
+        maleCardColor = activeCardColor;
+        femaleCardColor = inActiveCardColor;
+      } else {
+        maleCardColor = inActiveCardColor;
+      }
+    }
+    if (gender == 2) {
+      // FeMale Card Pressed
+      if (femaleCardColor == inActiveCardColor) {
+        femaleCardColor = activeCardColor;
+        maleCardColor = inActiveCardColor;
+      } else {
+        femaleCardColor = inActiveCardColor;
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: carColor,
+      backgroundColor: basicCardColor,
       appBar: AppBar(
-        backgroundColor: carColor,
-        shadowColor: carColor,
+        backgroundColor: basicCardColor,
+        shadowColor: basicCardColor,
         elevation: 15.0,
         centerTitle: true,
         title: const Text(
@@ -55,7 +83,7 @@ class _InputPageState extends State<InputPage> {
           ),
         ),
       ),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -65,17 +93,48 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: ReusableCard(
-                    changeableColor: carColorLighter,
-                    cardChild: IconTextWidget(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'MALE',
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        colorUpdater(1);
+                      });
+                    },
+                    child: ReusableCard(
+                      changeableColor: maleCardColor,
+                      cardChild: IconTextWidget(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        colorUpdater(2);
+                      });
+                    },
+                    child: ReusableCard(
+                      changeableColor: femaleCardColor,
+                      cardChild: IconTextWidget(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
                   child: ReusableCard(
-                    changeableColor: carColorLighter,
+                    changeableColor: femaleCardColor,
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
@@ -92,24 +151,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    changeableColor: carColorLighter,
-                    cardChild: IconTextWidget(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: ReusableCard(
-                    changeableColor: carColorLighter,
+                    changeableColor: inActiveCardColor,
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
@@ -118,7 +160,7 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: ReusableCard(
-                    changeableColor: carColorLighter,
+                    changeableColor: inActiveCardColor,
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
