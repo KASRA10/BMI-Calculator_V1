@@ -16,7 +16,7 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: basicCardColor,
+      color: kBasicCardColor,
       home: InputPage(),
     );
   }
@@ -37,10 +37,10 @@ class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: basicCardColor,
+      backgroundColor: kBasicCardColor,
       appBar: AppBar(
-        backgroundColor: basicCardColor,
-        shadowColor: basicCardColor,
+        backgroundColor: kBasicCardColor,
+        shadowColor: kBasicCardColor,
         elevation: 15.0,
         centerTitle: true,
         title: const Text(
@@ -93,7 +93,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    changeableColor: inActiveCardColor,
+                    changeableColor: kInActiveCardColor,
                     cardChild: Column(
                       children: [],
                     ),
@@ -119,7 +119,7 @@ class _InputPageState extends State<InputPage> {
           ),
           ButtonContainer(
             changeableHeight: 80.0,
-            changeableColor: buttonButton,
+            changeableColor: kButtonButton,
           ),
         ],
       ),

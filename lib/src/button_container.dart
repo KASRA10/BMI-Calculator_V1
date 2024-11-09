@@ -23,8 +23,8 @@ class ButtonContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: changeableColor,
         borderRadius: BorderRadius.only(
-          topLeft: marginDesignCirCularButton,
-          topRight: marginDesignCirCularButton,
+          topLeft: kMarginDesignCirCularButton,
+          topRight: kMarginDesignCirCularButton,
         ),
       ),
     );

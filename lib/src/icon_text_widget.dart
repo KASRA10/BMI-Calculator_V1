@@ -20,7 +20,7 @@ class IconTextWidget extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: iconColors,
+          color: kIconColors,
           size: 80.0,
           semanticLabel: 'Men\'s Icons',
         ),
@@ -29,7 +29,7 @@ class IconTextWidget extends StatelessWidget {
         ),
         Text(
           label,
-          style: myTextStyle,
+          style: kMyTextStyle,
         ),
       ],
     );
