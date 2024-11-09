@@ -4,18 +4,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator_v1/src/reusable_card.dart';
 import 'package:bmi_calculator_v1/src/button_container.dart';
 import 'package:bmi_calculator_v1/src/icon_text_widget.dart';
+import 'package:bmi_calculator_v1/src/color_updater.dart';
 
 const basicCardColor = Color(
   0xFF1D1E33,
 );
-const activeCardColor = Color(
-  0xFF2D2E41,
-);
 const buttonButton = Color(
   0xFFEB1555,
-);
-const inActiveCardColor = Color(
-  0xFF111328,
 );
 
 void main() => runApp(const BMICalculator());
@@ -42,31 +37,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color maleCardColor = inActiveCardColor;
-  Color femaleCardColor = inActiveCardColor;
-
-  // 1 = male, 2= female ==> for Changeable colors
-  void colorUpdater(int gender) {
-    if (gender == 1) {
-      // Male Card Pressed
-      if (maleCardColor == inActiveCardColor) {
-        maleCardColor = activeCardColor;
-        femaleCardColor = inActiveCardColor;
-      } else {
-        maleCardColor = inActiveCardColor;
-      }
-    }
-    if (gender == 2) {
-      // FeMale Card Pressed
-      if (femaleCardColor == inActiveCardColor) {
-        femaleCardColor = activeCardColor;
-        maleCardColor = inActiveCardColor;
-      } else {
-        femaleCardColor = inActiveCardColor;
-      }
-    }
-  }
-
+  ColorUpdate colorUpdate =
+      ColorUpdate(); // Create An Object From ColorChanger Class
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,11 +68,11 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        colorUpdater(1);
+                        colorUpdate.colorUpdater(Gender.male);
                       });
                     },
                     child: ReusableCard(
-                      changeableColor: maleCardColor,
+                      changeableColor: colorUpdate.maleCardColor,
                       cardChild: IconTextWidget(
                         icon: FontAwesomeIcons.mars,
                         label: 'MALE',
@@ -112,11 +84,11 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        colorUpdater(2);
+                        colorUpdate.colorUpdater(Gender.female);
                       });
                     },
                     child: ReusableCard(
-                      changeableColor: femaleCardColor,
+                      changeableColor: colorUpdate.femaleCardColor,
                       cardChild: IconTextWidget(
                         icon: FontAwesomeIcons.venus,
                         label: 'FEMALE',
@@ -134,7 +106,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    changeableColor: femaleCardColor,
+                    changeableColor: colorUpdate.femaleCardColor,
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
