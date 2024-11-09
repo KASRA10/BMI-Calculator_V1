@@ -31,6 +31,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  int heightNumber = 175;
+
   ColorUpdate colorUpdate =
       ColorUpdate(); // Create An Object From ColorChanger Class
 
@@ -95,7 +97,53 @@ class _InputPageState extends State<InputPage> {
                   child: ReusableCard(
                     changeableColor: kInActiveCardColor,
                     cardChild: Column(
-                      children: [],
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'HEIGHT',
+                          style: kMyTextStyle,
+                        ),
+                        Row(
+                          textBaseline: TextBaseline.alphabetic,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          children: [
+                            Text(
+                              '$heightNumber',
+                              style: kNumberTextStyle,
+                            ),
+                            Text(
+                              'cm',
+                              style: kMyTextStyle,
+                            ),
+                          ],
+                        ),
+                        SliderTheme(
+                          data: SliderTheme.of(context).copyWith(
+                            thumbShape: RoundSliderThumbShape(
+                              enabledThumbRadius: 15.0,
+                            ),
+                            overlayShape: RoundSliderOverlayShape(
+                              overlayRadius: 30.0,
+                            ),
+                            thumbColor: kSliderThumbColor,
+                            activeTrackColor: kSliderActiveBarColor,
+                            inactiveTrackColor: kSliderInActiveBarColor,
+                            overlayColor: kSliderOverLayColor,
+                          ),
+                          child: Slider(
+                            value: heightNumber.toDouble(),
+                            min: minHeightNumber,
+                            max: maxHeightNumber,
+                            onChanged: (double newHeightNumber) {
+                              setState(() {
+                                heightNumber = newHeightNumber.round();
+                              });
+                            },
+                          ),
+                        ),
+                      ],
                     ),
                     onPress: () {},
                   ),
