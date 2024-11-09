@@ -5,6 +5,7 @@ import 'package:bmi_calculator_v1/src/constants.dart';
 import 'package:bmi_calculator_v1/src/reusable_card.dart';
 import 'package:bmi_calculator_v1/src/button_container.dart';
 import 'package:bmi_calculator_v1/src/icon_text_widget.dart';
+import 'package:bmi_calculator_v1/src/my_slider.dart';
 import 'package:bmi_calculator_v1/src/color_updater.dart';
 
 void main() => runApp(const BMICalculator());
@@ -117,25 +118,13 @@ class _InputPageState extends State<InputPage> {
                             ),
                           ],
                         ),
-                        SliderTheme(
-                          data: SliderTheme.of(context).copyWith(
-                            thumbShape: kThumbShapeRoundEdge,
-                            overlayShape: kOverLayShapeRoundEdge,
-                            thumbColor: kSliderThumbColor,
-                            activeTrackColor: kSliderActiveBarColor,
-                            inactiveTrackColor: kSliderInActiveBarColor,
-                            overlayColor: kSliderOverLayColor,
-                          ),
-                          child: Slider(
-                            value: heightNumber.toDouble(),
-                            min: minHeightNumber,
-                            max: maxHeightNumber,
-                            onChanged: (double newHeightNumber) {
-                              setState(() {
-                                heightNumber = newHeightNumber.round();
-                              });
-                            },
-                          ),
+                        MySlider(
+                          heightNumber: heightNumber,
+                          onChanged: (double newHeightNumber) {
+                            setState(() {
+                              heightNumber = newHeightNumber.round();
+                            });
+                          },
                         ),
                       ],
                     ),
