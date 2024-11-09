@@ -45,6 +45,10 @@ const kSliderOverLayColor = Color(
   0x29EB1555,
 );
 
+const kMainTitle = TextStyle(
+  color: Colors.white,
+);
+
 const kMyTextStyle = TextStyle(
   fontSize: 18.0,
   color: kTextColors,
