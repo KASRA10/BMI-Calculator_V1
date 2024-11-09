@@ -17,24 +17,13 @@ class ColorUpdate {
   Color femaleCardColor = inActiveCardColor;
 
   // 1 = male, 2= female ==> for Changeable colors
-  void colorUpdater(Gender gender) {
-    if (gender == Gender.male) {
-      // Male Card Pressed
-      if (maleCardColor == inActiveCardColor) {
-        maleCardColor = activeCardColor;
-        femaleCardColor = inActiveCardColor;
-      } else {
-        maleCardColor = inActiveCardColor;
-      }
-    }
-    if (gender == Gender.female) {
-      // FeMale Card Pressed
-      if (femaleCardColor == inActiveCardColor) {
-        femaleCardColor = activeCardColor;
-        maleCardColor = inActiveCardColor;
-      } else {
-        femaleCardColor = inActiveCardColor;
-      }
-    }
+  void colorUpdater(Gender selectedGender) {
+    // Male Is pressed
+    maleCardColor =
+        selectedGender == Gender.male ? activeCardColor : inActiveCardColor;
+
+    // Female is Pressed
+    femaleCardColor =
+        selectedGender == Gender.female ? activeCardColor : inActiveCardColor;
   }
 }
