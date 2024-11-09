@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'package:bmi_calculator_v1/src/constants.dart';
 import 'package:bmi_calculator_v1/src/reusable_card.dart';
 import 'package:bmi_calculator_v1/src/button_container.dart';
 import 'package:bmi_calculator_v1/src/icon_text_widget.dart';
 import 'package:bmi_calculator_v1/src/color_updater.dart';
-
-const basicCardColor = Color(
-  0xFF1D1E33,
-);
-const buttonButton = Color(
-  0xFFEB1555,
-);
 
 void main() => runApp(const BMICalculator());
 
@@ -98,7 +92,13 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Placeholder(),
+                  child: ReusableCard(
+                    changeableColor: inActiveCardColor,
+                    cardChild: Column(
+                      children: [],
+                    ),
+                    onPress: () {},
+                  ),
                 ),
               ],
             ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-Radius marginDesignCirCular = Radius.circular(
-  10.0,
-);
+import 'package:bmi_calculator_v1/src/constants.dart';
 
 class ButtonContainer extends StatelessWidget {
   final double changeableHeight;
@@ -25,8 +23,8 @@ class ButtonContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: changeableColor,
         borderRadius: BorderRadius.only(
-          topLeft: marginDesignCirCular,
-          topRight: marginDesignCirCular,
+          topLeft: marginDesignCirCularButton,
+          topRight: marginDesignCirCularButton,
         ),
       ),
     );

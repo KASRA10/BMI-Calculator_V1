@@ -1,16 +1,6 @@
 import 'package:flutter/material.dart';
 
-const activeCardColor = Color(
-  0xFF2D2E41,
-);
-const inActiveCardColor = Color(
-  0xFF111328,
-);
-
-enum Gender {
-  male,
-  female,
-}
+import 'package:bmi_calculator_v1/src/constants.dart';
 
 class ColorUpdate {
   Color maleCardColor = inActiveCardColor;

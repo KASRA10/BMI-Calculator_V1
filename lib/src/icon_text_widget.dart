@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 
-const textColors = Color(
-  0xFF8D8E98,
-);
-const iconColors = Color(
-  0xFFFFFFFF,
-);
-const myTextStyle = TextStyle(
-  fontSize: 18.0,
-  color: textColors,
-);
+import 'package:bmi_calculator_v1/src/constants.dart';
 
 class IconTextWidget extends StatelessWidget {
   final IconData icon;

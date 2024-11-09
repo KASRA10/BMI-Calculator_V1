@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
-const marginDesign = EdgeInsets.all(
-  15.0,
-);
-
-BorderRadius marginDesignCirCular = BorderRadius.circular(
-  15.0,
-);
+import 'package:bmi_calculator_v1/src/constants.dart';
 
 class ReusableCard extends StatelessWidget {
   final Color changeableColor;
