@@ -70,7 +70,15 @@ BorderRadius marginDesignCirCular = BorderRadius.circular(
 
 const Radius kMarginDesignCirCularButton = Radius.circular(
   10.0,
-); // ENd Of kMarginDesignCirCularButton
+); // End Of kMarginDesignCirCularButton
+
+const kOverLayShapeRoundEdge = RoundSliderOverlayShape(
+  overlayRadius: 30.0,
+); // End Of kOverLayShapeRoundEdge
+
+const kThumbShapeRoundEdge = RoundSliderThumbShape(
+  enabledThumbRadius: 15.0,
+); // End Of kThumbShapeRoundEdge
 
 const minHeightNumber = 110.0;
 
