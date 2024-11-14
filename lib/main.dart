@@ -140,7 +140,69 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Placeholder(),
+                  child: ReusableCard(
+                    changeableColor: kInActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'WEIGHT',
+                          style: kMyTextStyle,
+                        ),
+                        Text(
+                          '$weight',
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              onPressed: () => {},
+                              backgroundColor: Color(
+                                0xFF4C4F5E,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    50.0,
+                                  ),
+                                ),
+                              ),
+                              child: Icon(
+                                FontAwesomeIcons.plus,
+                                color: Colors.white,
+                                size: 18.0,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            FloatingActionButton(
+                              onPressed: () => {},
+                              backgroundColor: Color(
+                                0xFF4C4F5E,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    50.0,
+                                  ),
+                                ),
+                              ),
+                              child: Icon(
+                                FontAwesomeIcons.minus,
+                                color: Colors.white,
+                                size: 18.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    onPress: () => {},
+                  ),
                 ),
                 Expanded(
                   child: Placeholder(),

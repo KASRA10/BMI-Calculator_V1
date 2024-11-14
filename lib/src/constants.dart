@@ -87,3 +87,5 @@ const kThumbShapeRoundEdge = RoundSliderThumbShape(
 const minHeightNumber = 110.0;
 
 const maxHeightNumber = 299.0;
+
+int weight = 60;
