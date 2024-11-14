@@ -161,12 +161,22 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             RoundIconButton(
                               rawIconData: FontAwesomeIcons.minus,
+                              onTap: () => {
+                                setState(() {
+                                  weight--;
+                                }),
+                              },
                             ),
                             SizedBox(
                               width: 10.0,
                             ),
                             RoundIconButton(
                               rawIconData: FontAwesomeIcons.plus,
+                              onTap: () => {
+                                setState(() {
+                                  weight++;
+                                }),
+                              },
                             ),
                           ],
                         ),
@@ -176,7 +186,53 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ),
                 Expanded(
-                  child: Placeholder(),
+                  child: ReusableCard(
+                    changeableColor: kInActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'AGE',
+                          style: kMyTextStyle,
+                        ),
+                        Text(
+                          '$age',
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              rawIconData: FontAwesomeIcons.minus,
+                              onTap: () => {
+                                setState(
+                                  () {
+                                    age--;
+                                  },
+                                ),
+                              },
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              rawIconData: FontAwesomeIcons.plus,
+                              onTap: () => {
+                                setState(
+                                  () {
+                                    age++;
+                                  },
+                                ),
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    onPress: () => {},
+                  ),
                 ),
               ],
             ),
