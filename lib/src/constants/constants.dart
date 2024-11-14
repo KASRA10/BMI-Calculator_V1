@@ -7,13 +7,9 @@ enum Gender {
   female,
 } // End Of Gender
 
-int heightNumber = 175;
-
 const minHeightNumber = 110.0;
 
 const maxHeightNumber = 299.0;
-
-int weight = 60;
 
 int age = 18;
 

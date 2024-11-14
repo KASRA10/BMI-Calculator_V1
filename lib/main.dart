@@ -40,6 +40,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  int heightNumber = 175;
+  int weight = 60;
   ColorUpdate colorUpdate =
       ColorUpdate(); // Create An Object From ColorChanger Class
 
@@ -261,8 +263,8 @@ class _InputPageState extends State<InputPage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ResultPage(
-                    resultText: calculatorBrain.getResult(),
                     bmiResult: calculatorBrain.calculateBMI(),
+                    resultText: calculatorBrain.getResult(),
                     interpretation: calculatorBrain.getInterPretation(),
                   ),
                 ),
