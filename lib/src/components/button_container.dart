@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:bmi_calculator_v1/src/constants.dart';
+import 'package:bmi_calculator_v1/src/constants/constants.dart';
 
 class ButtonContainer extends StatelessWidget {
   final double changeableHeight;
@@ -33,8 +33,11 @@ class ButtonContainer extends StatelessWidget {
             topRight: kMarginDesignCirCularButton,
           ),
         ),
-        child: Text(
-          buttonText,
+        child: Center(
+          child: Text(
+            buttonText,
+            style: kLargeButtonTextStyle,
+          ),
         ),
       ),
     );

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:bmi_calculator_v1/src/constants.dart';
-import 'package:bmi_calculator_v1/src/reusable_card.dart';
-import 'package:bmi_calculator_v1/src/button_container.dart';
-import 'package:bmi_calculator_v1/src/icon_text_widget.dart';
-import 'package:bmi_calculator_v1/src/my_slider.dart';
-import 'package:bmi_calculator_v1/src/color_updater.dart';
-import 'package:bmi_calculator_v1/src/result_page.dart';
-import 'package:bmi_calculator_v1/src/round_icon_button.dart';
+import 'package:bmi_calculator_v1/src/constants/constants.dart';
+import 'package:bmi_calculator_v1/src/components/reusable_card.dart';
+import 'package:bmi_calculator_v1/src/components/button_container.dart';
+import 'package:bmi_calculator_v1/src/components/icon_text_widget.dart';
+import 'package:bmi_calculator_v1/src/components/my_slider.dart';
+import 'package:bmi_calculator_v1/src/components/color_updater.dart';
+import 'package:bmi_calculator_v1/src/screens/result_page.dart';
+import 'package:bmi_calculator_v1/src/components/round_icon_button.dart';
 
 void main() => runApp(const BMICalculator());
 
@@ -244,7 +244,7 @@ class _InputPageState extends State<InputPage> {
           ButtonContainer(
             changeableHeight: 80.0,
             changeableColor: kButtonButton,
-            buttonText: 'CalCulate',
+            buttonText: 'CALCULATE',
             onPress: () {
               Navigator.push(
                 context,

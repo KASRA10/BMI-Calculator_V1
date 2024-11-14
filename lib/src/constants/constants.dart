@@ -7,6 +7,16 @@ enum Gender {
   female,
 } // End Of Gender
 
+int heightNumber = 175;
+
+const minHeightNumber = 110.0;
+
+const maxHeightNumber = 299.0;
+
+int weight = 60;
+
+int age = 18;
+
 const kBasicCardColor = Color(
   0xFF1D1E33,
 ); // End Of kBasicCardColor
@@ -32,8 +42,6 @@ const kTextColors = Color(
 const kIconColors = Color(
   0xFFFFFFFF,
 ); // ENd Of kIconColors
-
-int heightNumber = 175;
 
 const kSliderActiveBarColor = Colors.white;
 
@@ -68,6 +76,34 @@ const kNumberTextStyle = TextStyle(
   color: Colors.white,
 ); // ENd OF kNumberTextStyle
 
+const kLargeButtonTextStyle = TextStyle(
+  fontSize: 25,
+  fontWeight: FontWeight.bold,
+);
+
+const kResultTitle = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kResultTextStyle = TextStyle(
+  color: Color(
+    0xFF24D876,
+  ),
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kBMITextStyle = TextStyle(
+  fontSize: 100.0,
+  fontWeight: FontWeight.bold,
+);
+
+const kBodyTextStyle = TextStyle(
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);
+
 const kMarginDesign = EdgeInsets.all(
   15.0,
 ); // End Of kMarginDesign
@@ -88,15 +124,7 @@ const kThumbShapeRoundEdge = RoundSliderThumbShape(
   enabledThumbRadius: 15.0,
 ); // End Of kThumbShapeRoundEdge
 
-const minHeightNumber = 110.0;
-
-const maxHeightNumber = 299.0;
-
-int weight = 60;
-
 const kRawConstrains = BoxConstraints.tightFor(
   height: 56.0,
   width: 56.0,
 );
-
-int age = 18;
