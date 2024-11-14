@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -9,6 +11,7 @@ import 'package:bmi_calculator_v1/src/components/my_slider.dart';
 import 'package:bmi_calculator_v1/src/components/color_updater.dart';
 import 'package:bmi_calculator_v1/src/screens/result_page.dart';
 import 'package:bmi_calculator_v1/src/components/round_icon_button.dart';
+import 'package:bmi_calculator_v1/src/functions/calculate_brain.dart';
 
 void main() => runApp(const BMICalculator());
 
@@ -48,6 +51,9 @@ class _InputPageState extends State<InputPage> {
         backgroundColor: kBasicCardColor,
         shadowColor: kBasicCardColor,
         elevation: 15.0,
+        leading: BackButton(
+          onPressed: () => exit(0),
+        ),
         centerTitle: true,
         title: const Text(
           'BMI CALCULATOR',
@@ -246,10 +252,19 @@ class _InputPageState extends State<InputPage> {
             changeableColor: kButtonButton,
             buttonText: 'CALCULATE',
             onPress: () {
+              CalculatorBrain calculatorBrain = CalculatorBrain(
+                height: heightNumber,
+                weight: weight,
+              );
+
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ResultPage(),
+                  builder: (context) => ResultPage(
+                    resultText: calculatorBrain.getResult(),
+                    bmiResult: calculatorBrain.calculateBMI(),
+                    interpretation: calculatorBrain.getInterPretation(),
+                  ),
                 ),
               );
             },
