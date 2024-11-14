@@ -100,8 +100,7 @@ const kBMITextStyle = TextStyle(
 );
 
 const kBodyTextStyle = TextStyle(
-  fontSize: 22.0,
-  fontWeight: FontWeight.bold,
+  fontSize: 18.0,
 );
 
 const kMarginDesign = EdgeInsets.all(
