@@ -1,4 +1,3 @@
-import 'package:bmi_calculator_v1/src/round_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -8,6 +7,8 @@ import 'package:bmi_calculator_v1/src/button_container.dart';
 import 'package:bmi_calculator_v1/src/icon_text_widget.dart';
 import 'package:bmi_calculator_v1/src/my_slider.dart';
 import 'package:bmi_calculator_v1/src/color_updater.dart';
+import 'package:bmi_calculator_v1/src/result_page.dart';
+import 'package:bmi_calculator_v1/src/round_icon_button.dart';
 
 void main() => runApp(const BMICalculator());
 
@@ -18,7 +19,10 @@ class BMICalculator extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: kBasicCardColor,
+      theme: ThemeData.dark().copyWith(
+        primaryColor: kBasicCardColor,
+        scaffoldBackgroundColor: kBasicCardColor,
+      ),
       home: InputPage(),
     );
   }
@@ -240,6 +244,15 @@ class _InputPageState extends State<InputPage> {
           ButtonContainer(
             changeableHeight: 80.0,
             changeableColor: kButtonButton,
+            buttonText: 'CalCulate',
+            onPress: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(),
+                ),
+              );
+            },
           ),
         ],
       ),
