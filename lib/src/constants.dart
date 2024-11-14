@@ -53,6 +53,10 @@ const kMainTitle = TextStyle(
   color: Colors.white,
 );
 
+const kRawIconButtonColor = Color(
+  0xFF4C4F5E,
+);
+
 const kMyTextStyle = TextStyle(
   fontSize: 18.0,
   color: kTextColors,
@@ -89,3 +93,8 @@ const minHeightNumber = 110.0;
 const maxHeightNumber = 299.0;
 
 int weight = 60;
+
+const kRawConstrains = BoxConstraints.tightFor(
+  height: 56.0,
+  width: 56.0,
+);

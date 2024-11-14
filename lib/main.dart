@@ -1,3 +1,4 @@
+import 'package:bmi_calculator_v1/src/round_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -158,44 +159,14 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            FloatingActionButton(
-                              onPressed: () => {},
-                              backgroundColor: Color(
-                                0xFF4C4F5E,
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                    50.0,
-                                  ),
-                                ),
-                              ),
-                              child: Icon(
-                                FontAwesomeIcons.plus,
-                                color: Colors.white,
-                                size: 18.0,
-                              ),
+                            RoundIconButton(
+                              rawIconData: FontAwesomeIcons.minus,
                             ),
                             SizedBox(
                               width: 10.0,
                             ),
-                            FloatingActionButton(
-                              onPressed: () => {},
-                              backgroundColor: Color(
-                                0xFF4C4F5E,
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                    50.0,
-                                  ),
-                                ),
-                              ),
-                              child: Icon(
-                                FontAwesomeIcons.minus,
-                                color: Colors.white,
-                                size: 18.0,
-                              ),
+                            RoundIconButton(
+                              rawIconData: FontAwesomeIcons.plus,
                             ),
                           ],
                         ),
