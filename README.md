@@ -1,8 +1,8 @@
 # Image Preview 📸
-- Coming Soon...
+![BMI_K10_Screen](https://github.com/user-attachments/assets/815bb1bd-6185-49ec-9b8e-6fe7868b3103)
 
 # Video Preview 📽️
-- Coming Soon...
+https://github.com/user-attachments/assets/13cef630-1e33-46f0-9970-bcf98d445af9
 
 # About 📲
 This is a Simple And Functional BMI Application By Flutter. It Is Simply Calcualte Correct Satus Of Your Weight and Age Balance.
