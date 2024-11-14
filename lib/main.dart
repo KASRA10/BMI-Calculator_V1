@@ -32,8 +32,6 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  int heightNumber = 175;
-
   ColorUpdate colorUpdate =
       ColorUpdate(); // Create An Object From ColorChanger Class
 
@@ -69,6 +67,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE',
+                      iconMainColor: colorUpdate.firstMaleIconColor,
                     ),
                   ),
                 ),
@@ -81,6 +80,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: IconTextWidget(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
+                      iconMainColor: colorUpdate.firstFeMaleIconColor,
                     ),
                   ),
                 ),

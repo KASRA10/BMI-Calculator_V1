@@ -4,12 +4,14 @@ import 'package:bmi_calculator_v1/src/constants.dart';
 
 class IconTextWidget extends StatelessWidget {
   final IconData icon;
+  final Color iconMainColor;
   final String label;
 
   const IconTextWidget({
     super.key,
     required this.icon,
     required this.label,
+    required this.iconMainColor,
   });
 
   @override
@@ -20,7 +22,7 @@ class IconTextWidget extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: kIconColors,
+          color: iconMainColor,
           size: 80.0,
         ),
         SizedBox(

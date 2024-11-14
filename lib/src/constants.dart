@@ -23,6 +23,8 @@ const kInActiveCardColor = Color(
   0xFF111328,
 ); // End Of kInActiveCardColor
 
+const kActivatedColor = Colors.pink;
+
 const kTextColors = Color(
   0xFF8D8E98,
 ); // End Of kTextColors
@@ -30,6 +32,8 @@ const kTextColors = Color(
 const kIconColors = Color(
   0xFFFFFFFF,
 ); // ENd Of kIconColors
+
+int heightNumber = 175;
 
 const kSliderActiveBarColor = Colors.white;
 
